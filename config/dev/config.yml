@@ -1,0 +1,16 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8123
+  adminConnectors:
+    - type: http
+      port: 8124
+
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: DEBUG
+      logFormat: "%d{dd-MM-yyyy HH:mm:ss.SSS} %thread [%X{requestId}] [%X{clientId}] %-5level %logger{36} - %msg %replace(%exception){'\n','&#xd;'}%n"
+      timeZone: IST
+      target: stdout

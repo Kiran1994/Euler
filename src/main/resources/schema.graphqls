@@ -1,0 +1,14 @@
+schema {
+    query: QueryType
+}
+
+type QueryType {
+    userById(id: ID!): User
+    usersByName(name: String!): [User]
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+}
